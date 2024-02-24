@@ -1,16 +1,12 @@
 #!/usr/bin/env bash
-#nested loop stuff
-
-hours=0
-minutes=1
-while [ $hours -ne 13 ]
-do
-    echo "Hour: $hours"
-    ((hours++))
-    while [ $minutes -ne 60 ]
-    do
-	echo $minutes
-	((minutes++))
-    done
-    ((minutes = 1))
+# display the time
+i=0
+while [ $i -le 12 ]; do
+	echo "Hour: $i"
+	j=1
+	while [ $j -le 59 ]; do
+		echo "$j"
+		((j++))
+	done
+	((i++))
 done

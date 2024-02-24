@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-#using ls as a variable stuff
-
-list=$(ls)
-for i in $list
-do
-    echo "$i" | cut -d'-' -f 2
+# displays content of directory in list format
+for file in *; do
+	if [[ ! "$file" =~ ^\. ]]; then
+		name_after_dash=$(echo "$file" | cut -d"-" -f2-)
+		echo "$name_after_dash"
+	fi
 done

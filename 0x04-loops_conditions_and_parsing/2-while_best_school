@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
-#while loop
-
-count=1
-while [ $count -le 10 ]
-do
-    echo "Holberton School"
-    ((count++))
+# The script prints "Best School" using a while loop
+i=0
+while [ $i -lt 10 ]; do
+	echo "Best School"
+	((i++));
 done
